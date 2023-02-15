@@ -18,7 +18,7 @@ def start_main_page():
 
         lab_img1 = Button(
             main_window,
-            text="Select: ",
+            text="Select  -> ",
             bg='#4ce1de',
             border=0,
             justify='center',
@@ -83,7 +83,7 @@ def start_main_page():
         main_window,
         text="Jumbled Pinoy Words",
         bg='#4ce1de',
-        font=("Segoe Script", 28)
+        font=("Segoe Script", 30)
     )
     lab_img.pack(pady=(50, 0))
 
