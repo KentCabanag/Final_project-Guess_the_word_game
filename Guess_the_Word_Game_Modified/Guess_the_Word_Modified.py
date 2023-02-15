@@ -22,6 +22,9 @@ def start_main_page():
         elif args == 5:
             from Options import Bahagi_ng_Katawan
             Bahagi_ng_Katawan.main()
+        elif args == 6:
+            from Options import Pangulo
+            Pangulo.main()
 
     def option():
 
@@ -78,7 +81,7 @@ def start_main_page():
             command=lambda: start_game(4),
         )
 
-        sel_btn4 = Button(
+        sel_btn5 = Button(
             text="Bahagi ng Katawan",
             width=18,
             borderwidth=8,
@@ -89,12 +92,24 @@ def start_main_page():
             command=lambda: start_game(5),
         )
 
+        sel_btn6 = Button(
+            text="Pangulo",
+            width=18,
+            borderwidth=8,
+            font=("", 18),
+            fg="#000000",
+            bg="#4ce166",
+            cursor="hand2",
+            command=lambda: start_game(6),
+        )
+
         lab_img1.grid(row=0, column=0, padx=20)
-        sel_btn1.grid(row=0, column=4, pady=(10, 0), padx=90, )
-        sel_btn2.grid(row=1, column=4, pady=(10, 0), padx=90, )
-        sel_btn3.grid(row=2, column=4, pady=(10, 0), padx=90, )
-        sel_btn4.grid(row=3, column=4, pady=(10, 0), padx=90, )
-        sel_btn4.grid(row=4, column=4, pady=(10, 0), padx=90, )        
+        sel_btn1.grid(row=0, column=4, pady=(15, 0), padx=85, )
+        sel_btn2.grid(row=1, column=4, pady=(15, 0), padx=85, )
+        sel_btn3.grid(row=2, column=4, pady=(15, 0), padx=85, )
+        sel_btn4.grid(row=3, column=4, pady=(15, 0), padx=85, )
+        sel_btn5.grid(row=4, column=4, pady=(15, 0), padx=85, )        
+        sel_btn6.grid(row=5, column=4, pady=(15, 0), padx=85, )      
 
     def show_option():
         start_btn.destroy()

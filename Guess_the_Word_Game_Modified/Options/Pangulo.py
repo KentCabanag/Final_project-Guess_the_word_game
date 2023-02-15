@@ -3,14 +3,14 @@ from random import *
 from tkinter import messagebox
 import time
 
-Bahagi_WORD = ['LUO', 'SOBRA', 'WANGYAB', 'TINBI', 'HAKMU', 'BIDBID', 'ITNAY', 'MAKYA', 'APA', 'TAAM', 'LONGI',
-                'GIBIB', 'ABAB', 'HUKOB', 'GATEN', 'ABIL', 'GLEE', 'OKKU', 'ADILRI', 'SOLUP', 'BALKATI', 'DOHUT', 'IHTA', 'ADLI', 'OON']
+Pangulo_WORD = ['EMIOIL NALDOAGUI', 'NUELMA ZONQUE', 'SEJO URELLA', 'RESGIO MENASO', 'LUEMAN XAROS', 'MONAR SAYSAYMAG', 'ELDIOPI QUINORI', 'LOSRCA CIRAGA', 'DIOSDODA CAPAMALAG', 'DINAFERND CARMOS', 'ZONACOR QUINAO',
+                'DELFI ARMOS', 'RIAGOL GALCAMAPA', 'DRIGORO TERDUTE', 'BENOGIN QUIAON', 'PEHSOJ TRAESDA']
 
-Bahagi_ANSWER = ['ULO', 'BRASO', 'BAYWANG', 'BINTI', 'MUKHA', 'DIBDIB', 'TIYAN', 'KAMAY', 'PAA', 'MATA', 'ILONG',
-                'BIBIG', 'BABA', 'BUHOK', 'TENGA', 'LABI', 'LEEG', 'KUKO', 'DALIRI', 'PULSO', 'BALIKAT', 'TUHOD', 'HITA', 'DILA', 'NOO']
+Pangulo_ANSWER = ['EMILIO AGUINALDO', 'MANUEL QUEZON', 'JOSE LAUREL', 'SERGIO OSMENA', 'MANUEL ROXAS', 'RAMON MAGSAYSAY', 'ELPIDIO QUIRINO', 'CARLOS GARCIA', 'DIOSDADO MACAPAGAL', 'FERDINAND MARCOS', 'CORAZON AQUINO',
+                'FIDEL RAMOS', 'GLORIA MACAPAGAL', 'RODRIGO DUTERTE', 'BENIGNO AQUINO', 'JOSEPH ESTRADA']
 
-ran_num = randrange(0, (len(Bahagi_WORD)))
-jumbled_rand_word = Bahagi_WORD[ran_num]
+ran_num = randrange(0, (len(Pangulo_WORD)))
+jumbled_rand_word = Pangulo_WORD[ran_num]
 
 points = 0
 
@@ -22,20 +22,20 @@ def main():
 
     def change():
         global ran_num
-        ran_num = randrange(0, (len(Bahagi_WORD)))
-        word.configure(text=Bahagi_WORD[ran_num])
+        ran_num = randrange(0, (len(Pangulo_WORD)))
+        word.configure(text=Pangulo_WORD[ran_num])
         get_input.delete(0, END)
         ans_lab.configure(text="")
 
     def cheak():
         global points, ran_num
         user_word = get_input.get().upper()
-        if user_word == Bahagi_ANSWER[ran_num]:
+        if user_word == Pangulo_ANSWER[ran_num]:
             points += 5
             score.configure(text="Score: " + str(points))
             messagebox.showinfo('Correct', "Correct Answer...Keep it Up!")
-            ran_num = randrange(0, (len(Bahagi_WORD)))
-            word.configure(text=Bahagi_WORD[ran_num])
+            ran_num = randrange(0, (len(Pangulo_WORD)))
+            word.configure(text=Pangulo_WORD[ran_num])
             get_input.delete(0, END)
             ans_lab.configure(text="")
         else:
@@ -48,14 +48,14 @@ def main():
             points -= 5
             score.configure(text="Score: " + str(points))
             time.sleep(0.5)
-            ans_lab.configure(text=Bahagi_ANSWER[ran_num])
+            ans_lab.configure(text=Pangulo_ANSWER[ran_num])
         else:
             ans_lab.configure(text='Not enough points')
 
     my_window = Tk()
     my_window.geometry("800x500")
     my_window.resizable(0, 0)
-    my_window.title("Guess the Bahagi ng Katawan Pinoy Word")
+    my_window.title("Guess the Pangulo Pinoy Word")
     my_window.configure(background="#4ce1de")
 
     img1 = PhotoImage(file="button.png")
