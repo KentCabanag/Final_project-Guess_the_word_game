@@ -54,9 +54,9 @@ def main():
             ans_lab.configure(text='Not enough points')
 
     my_window = Tk()
-    my_window.geometry("500x500+500+150")
+    my_window.geometry("800x500")
     my_window.resizable(0, 0)
-    my_window.title("Guess the Word Game Pinoy Concept")
+    my_window.title("Guess the Pinoy Word Game")
     my_window.configure(background="#4ce1de")
 
     img1 = PhotoImage(file="button.png")
@@ -72,11 +72,11 @@ def main():
     lab_img1.pack(anchor='nw', pady=10, padx=10)
 
     score = Label(
-        text="Score:- 0",
+        text="Score: 0",
         pady=10,
         bg="#4ce1de",
         fg="#000000",
-        font="Titillium  14 bold"
+        font="Titillium  20 bold"
     )
     score.pack(anchor="n")
 
@@ -119,7 +119,7 @@ def main():
     change.pack()
 
     ans = Button(
-        text="Answer",
+        text="Hint",
         width=18,
         borderwidth=8,
         fg="#000000",

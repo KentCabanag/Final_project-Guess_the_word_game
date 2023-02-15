@@ -1,5 +1,8 @@
 from tkinter import *
-
+import pygame
+pygame.mixer.init()
+pygame.mixer.music.load("backgroundMusic.mp3")
+pygame.mixer.music.play(-1)
 
 def start_main_page():
     def start_game(args):
@@ -22,7 +25,7 @@ def start_main_page():
             bg='#4ce1de',
             border=0,
             justify='center',
-            font=("Segoe Script", 12)
+            font=("Segoe Script", 20)
 
         )
         sel_btn1 = Button(
@@ -58,9 +61,9 @@ def start_main_page():
             command=lambda: start_game(3),
         )
         lab_img1.grid(row=0, column=0, padx=20)
-        sel_btn1.grid(row=0, column=4, pady=(10, 0), padx=50, )
-        sel_btn2.grid(row=1, column=4, pady=(10, 0), padx=50, )
-        sel_btn3.grid(row=2, column=4, pady=(10, 0), padx=50, )
+        sel_btn1.grid(row=0, column=4, pady=(10, 0), padx=90, )
+        sel_btn2.grid(row=1, column=4, pady=(10, 0), padx=90, )
+        sel_btn3.grid(row=2, column=4, pady=(10, 0), padx=90, )
 
 
     def show_option():
@@ -71,11 +74,10 @@ def start_main_page():
 
     main_window = Tk()
 
-    main_window.geometry("500x500+500+150")
+    main_window.geometry("800x500")
     main_window.resizable(0, 0)
-    main_window.title("Guess the Word Game Pinoy Concept")
+    main_window.title("Guess the Pinoy Word Game")
     main_window.configure(background="#4ce1de")
-    
 
     img1 = PhotoImage(file="button.png")
 
@@ -83,7 +85,7 @@ def start_main_page():
         main_window,
         text="Jumbled Pinoy Words",
         bg='#4ce1de',
-        font=("Segoe Script", 30)
+        font=("Segoe Script", 45)
     )
     lab_img.pack(pady=(50, 0))
 
@@ -94,7 +96,7 @@ def start_main_page():
         borderwidth=8,
         fg="#000000",
         bg="#4ce166",
-        font=("", 13),
+        font=("", 18),
         cursor="hand2",
         command=show_option,
     )
