@@ -3,11 +3,11 @@ from random import *
 from tkinter import messagebox
 import time
 
-Hayop_WORD = ['DOBOA', 'TEKSIB', 'BIPOS', 'LADCETARE', 'TISONL', 'GIDUNUNA', 'HAWINI', 'GINAL', 'CHADOME', 'NUDOME', 'GALANI',
-                'KAPTEB', 'SIWAKP', 'SAPNIT', 'SIGANING', 'PALUKANMANSI', 'GISSI', 'PAAT', 'LANOTI', 'SINOTU',]
+Hayop_WORD = ['GALIA', 'SAHA', 'SOA', 'YOBBA', 'AKAB', 'KIBUTI', 'AYWAUB', 'BAKAYO', 'WABKALA', 'BINGMAK', 'NUEHOK',
+                'AADG', 'NOBI', 'LAPAAK', 'SUPA', 'SOUS', 'GUNYOG', 'WAKU', 'BUGOYBU', 'SUPIT',]
 
-Hayop_ANSWER = ['ADOBO', 'BISTEK', 'BOPIS', 'CALDERETA', 'LITSON', 'DINUGUAN', 'INIHAW', 'LAING', 'MECHADO', 'MENUDO', 'NILAGA',
-                'PAKBET', 'PAKSIW', 'PANSIT', 'SINIGANG', 'SINAMPALUKAN', 'SISIG', 'TAPA', 'TINOLA', 'TUSINO']
+Hayop_ANSWER = ['AGILA', 'AHAS', 'ASO', 'BABOY', 'BAKA', 'BUTIKI', 'BUWAYA', 'KABAYO', 'KALABAW', 'KAMBING', 'KUNEHO',
+                'DAGA', 'IBON', 'PALAKA', 'PUSA', 'SUSO', 'UNGGOY', 'UWAK', 'BUBUYOG', 'PUSIT']
 
 ran_num = randrange(0, (len(Hayop_WORD)))
 jumbled_rand_word = Hayop_WORD[ran_num]

@@ -3,11 +3,11 @@ from random import *
 from tkinter import messagebox
 import time
 
-Ulam_WORD = ['GALIA', 'SAHA', 'SOA', 'YOBBA', 'AKAB', 'KIBUTI', 'AYWAUB', 'BAKAYO', 'WABKALA', 'BINGMAK', 'NUEHOK',
-                'AADG', 'NOBI', 'LAPAAK', 'SUPA', 'SOUS', 'GUNYOG', 'WAKU', 'BUGOYBU', 'SUPIT',]
+Ulam_WORD = ['DOBOA', 'TEKSIB', 'BIPOS', 'LADCETARE', 'TISONL', 'GIDUNUNA', 'HAWINI', 'GINAL', 'CHADOME', 'NUDOME', 'GALANI',
+                'KAPTEB', 'SIWAKP', 'SAPNIT', 'SIGANING', 'PALUKANMANSI', 'GISSI', 'PAAT', 'LANOTI', 'SINOTU',]
 
-Ulam_ANSWER = ['AGILA', 'AHAS', 'ASO', 'BABOY', 'BAKA', 'BUTIKI', 'BUWAYA', 'KABAYO', 'KALABAW', 'KAMBING', 'KUNEHO',
-                'DAGA', 'IBON', 'PALAKA', 'PUSA', 'SUSO', 'UNGGOY', 'UWAK', 'BUBUYOG', 'PUSIT']
+Ulam_ANSWER = ['ADOBO', 'BISTEK', 'BOPIS', 'CALDERETA', 'LITSON', 'DINUGUAN', 'INIHAW', 'LAING', 'MECHADO', 'MENUDO', 'NILAGA',
+                'PAKBET', 'PAKSIW', 'PANSIT', 'SINIGANG', 'SINAMPALUKAN', 'SISIG', 'TAPA', 'TINOLA', 'TUSINO']
 
 ran_num = randrange(0, (len(Ulam_WORD)))
 jumbled_rand_word = Ulam_WORD[ran_num]
