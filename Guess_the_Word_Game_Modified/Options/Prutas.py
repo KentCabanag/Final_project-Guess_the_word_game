@@ -4,10 +4,10 @@ from tkinter import messagebox
 import time
 
 Prutas_WORD = ['GINGSA', 'NGMAGA', 'KANGLA', 'RUDYAN', 'YOGIN', 'YABANOGU', 'WANPAK', 'YABABAS', 'BUDOKAA', 'SENSOLAN', 'MIITOKA',
-                'NASTOL', 'HUDTA', 'SIKOT', 'SITA', 'AAYAPP', 'AKOPAM', 'LINOM', 'BUTAMARN', 'LANDADAN', ]
+                'NASTOL', 'HUDTA', 'SIKOT', 'SITA', 'AAYAPP', 'AKOPAM', 'LINOM', 'BUTAMARN', 'LANDADAN']
 
 Prutas_ANSWER = ['SAGING', 'MANGGA', 'LANGKA', 'DURYAN', 'NIYOG', 'GUYABANO', 'PAKWAN', 'BAYABAS', 'ABUKADO', 'LANSONES', 'KAIMITO',
-                  'SANTOL', 'DUHAT', 'TSIKO', 'ATIS', 'PAPAYA', 'MAKOPA', 'MILON', 'RAMBUTAN', 'DALANDAN', ]
+                  'SANTOL', 'DUHAT', 'TSIKO', 'ATIS', 'PAPAYA', 'MAKOPA', 'MILON', 'RAMBUTAN', 'DALANDAN']
 
 ran_num = randrange(0, (len(Prutas_WORD)))
 jumbled_rand_word = Prutas_WORD[ran_num]
@@ -56,7 +56,7 @@ def main():
     my_window = Tk()
     my_window.geometry("800x500")
     my_window.resizable(0, 0)
-    my_window.title("Guess the Pinoy Word Game")
+    my_window.title("Guess the Prutas Pinoy Word")
     my_window.configure(background="#4ce1de")
 
     img1 = PhotoImage(file="button.png")
@@ -70,13 +70,13 @@ def main():
         command=back,
     )
     lab_img1.pack(anchor='nw', pady=10, padx=10)
-
+    
     score = Label(
         text="Score: 0",
         pady=10,
         bg="#4ce1de",
         fg="#000000",
-        font="Titillium  20 bold"
+        font="Courier  20 bold"
     )
     score.pack(anchor="n")
 
