@@ -85,7 +85,7 @@ def start_main_page():
         main_window,
         text="Jumbled Pinoy Words",
         bg='#4ce1de',
-        font=("Segoe Script", 45)
+        font=("Segoe Script bold", 45)
     )
     lab_img.pack(pady=(50, 0))
 

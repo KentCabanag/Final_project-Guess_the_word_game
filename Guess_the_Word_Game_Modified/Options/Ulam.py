@@ -3,14 +3,14 @@ from random import *
 from tkinter import messagebox
 import time
 
-Hayop_WORD = ['DOBOA', 'TEKSIB', 'BIPOS', 'LADCETARE', 'TISONL', 'GIDUNUNA', 'HAWINI', 'GINAL', 'CHADOME', 'NUDOME', 'GALANI',
-                'KAPTEB', 'SIWAKP', 'SAPNIT', 'SIGANING', 'PALUKANMANSI', 'GISSI', 'PAAT', 'LANOTI', 'SINOTU',]
+Ulam_WORD = ['GALIA', 'SAHA', 'SOA', 'YOBBA', 'AKAB', 'KIBUTI', 'AYWAUB', 'BAKAYO', 'WABKALA', 'BINGMAK', 'NUEHOK',
+                'AADG', 'NOBI', 'LAPAAK', 'SUPA', 'SOUS', 'GUNYOG', 'WAKU', 'BUGOYBU', 'SUPIT',]
 
-Hayop_ANSWER = ['ADOBO', 'BISTEK', 'BOPIS', 'CALDERETA', 'LITSON', 'DINUGUAN', 'INIHAW', 'LAING', 'MECHADO', 'MENUDO', 'NILAGA',
-                'PAKBET', 'PAKSIW', 'PANSIT', 'SINIGANG', 'SINAMPALUKAN', 'SISIG', 'TAPA', 'TINOLA', 'TUSINO']
+Ulam_ANSWER = ['AGILA', 'AHAS', 'ASO', 'BABOY', 'BAKA', 'BUTIKI', 'BUWAYA', 'KABAYO', 'KALABAW', 'KAMBING', 'KUNEHO',
+                'DAGA', 'IBON', 'PALAKA', 'PUSA', 'SUSO', 'UNGGOY', 'UWAK', 'BUBUYOG', 'PUSIT']
 
-ran_num = randrange(0, (len(Hayop_WORD)))
-jumbled_rand_word = Hayop_WORD[ran_num]
+ran_num = randrange(0, (len(Ulam_WORD)))
+jumbled_rand_word = Ulam_WORD[ran_num]
 
 points = 0
 
@@ -22,20 +22,20 @@ def main():
 
     def change():
         global ran_num
-        ran_num = randrange(0, (len(Hayop_WORD)))
-        word.configure(text=Hayop_WORD[ran_num])
+        ran_num = randrange(0, (len(Ulam_WORD)))
+        word.configure(text=Ulam_WORD[ran_num])
         get_input.delete(0, END)
         ans_lab.configure(text="")
 
     def cheak():
         global points, ran_num
         user_word = get_input.get().upper()
-        if user_word == Hayop_ANSWER[ran_num]:
+        if user_word == Ulam_ANSWER[ran_num]:
             points += 5
             score.configure(text="Score: " + str(points))
             messagebox.showinfo('Correct', "Correct Answer...Keep it Up!")
-            ran_num = randrange(0, (len(Hayop_WORD)))
-            word.configure(text=Hayop_WORD[ran_num])
+            ran_num = randrange(0, (len(Ulam_WORD)))
+            word.configure(text=Ulam_WORD[ran_num])
             get_input.delete(0, END)
             ans_lab.configure(text="")
         else:
@@ -48,14 +48,14 @@ def main():
             points -= 5
             score.configure(text="Score: " + str(points))
             time.sleep(0.5)
-            ans_lab.configure(text=Hayop_ANSWER[ran_num])
+            ans_lab.configure(text=Ulam_ANSWER[ran_num])
         else:
             ans_lab.configure(text='Not enough points')
 
     my_window = Tk()
     my_window.geometry("800x500")
     my_window.resizable(0, 0)
-    my_window.title("Guess the Hayop Pinoy Word")
+    my_window.title("Guess the Ulam Pinoy Word")
     my_window.configure(background="#4ce1de")
 
     img1 = PhotoImage(file="button.png")
