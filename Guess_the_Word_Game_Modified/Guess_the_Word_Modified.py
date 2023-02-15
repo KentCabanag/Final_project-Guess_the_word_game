@@ -16,6 +16,9 @@ def start_main_page():
         elif args == 3:
             from Options import Ulam
             Ulam.main()
+        elif args == 4:
+            from Options import Laro
+            Laro.main()
 
     def option():
 
@@ -60,11 +63,23 @@ def start_main_page():
             cursor="hand2",
             command=lambda: start_game(3),
         )
+
+        sel_btn4 = Button(
+            text="Laro",
+            width=18,
+            borderwidth=8,
+            font=("", 18),
+            fg="#000000",
+            bg="#4ce166",
+            cursor="hand2",
+            command=lambda: start_game(4),
+        )
+
         lab_img1.grid(row=0, column=0, padx=20)
         sel_btn1.grid(row=0, column=4, pady=(10, 0), padx=90, )
         sel_btn2.grid(row=1, column=4, pady=(10, 0), padx=90, )
         sel_btn3.grid(row=2, column=4, pady=(10, 0), padx=90, )
-
+        sel_btn4.grid(row=3, column=4, pady=(10, 0), padx=90, )
 
     def show_option():
         start_btn.destroy()
