@@ -18,11 +18,11 @@ def start_main_page():
 
         lab_img1 = Button(
             main_window,
-            text="Select",
-            bg='#e6fff5',
+            text="Select: ",
+            bg='#4ce1de',
             border=0,
             justify='center',
-            font=("Arial", 12)
+            font=("Segoe Script", 12)
 
         )
         sel_btn1 = Button(
@@ -31,7 +31,7 @@ def start_main_page():
             borderwidth=8,
             font=("", 18),
             fg="#000000",
-            bg="#99ffd6",
+            bg="#4ce166",
             cursor="hand2",
             command=lambda: start_game(1),
         )
@@ -42,7 +42,7 @@ def start_main_page():
             borderwidth=8,
             font=("", 18),
             fg="#000000",
-            bg="#99ffd6",
+            bg="#4ce166",
             cursor="hand2",
             command=lambda: start_game(2),
         )
@@ -53,7 +53,7 @@ def start_main_page():
             borderwidth=8,
             font=("", 18),
             fg="#000000",
-            bg="#99ffd6",
+            bg="#4ce166",
             cursor="hand2",
             command=lambda: start_game(3),
         )
@@ -74,16 +74,16 @@ def start_main_page():
     main_window.geometry("500x500+500+150")
     main_window.resizable(0, 0)
     main_window.title("Guess the Word Game Pinoy Concept")
-    main_window.configure(background="#e6fff5")
+    main_window.configure(background="#4ce1de")
     
 
     img1 = PhotoImage(file="button.png")
 
     lab_img = Label(
         main_window,
-        text="Guess the Word Game Pinoy Concept",
-        bg='#e6fff5',
-        font=("Courier", 28)
+        text="Jumbled Pinoy Words",
+        bg='#4ce1de',
+        font=("Segoe Script", 28)
     )
     lab_img.pack(pady=(50, 0))
 
@@ -93,7 +93,7 @@ def start_main_page():
         width=18,
         borderwidth=8,
         fg="#000000",
-        bg="#99ffd6",
+        bg="#4ce166",
         font=("", 13),
         cursor="hand2",
         command=show_option,
