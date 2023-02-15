@@ -3,14 +3,14 @@ from random import *
 from tkinter import messagebox
 import time
 
-Laro_WORD = ['GAWANA SEBA', 'WANGAGA LOSUK', 'HAYBA HAYBANA', 'HAYBA BUKO', 'CHISENE TERGAR', 'LATING PALU', 'SONGLUK KABA', 'KULSONG KINTI', 'LOBOSEPA', 'PATEROTIN', 'KIPO',
-                'TIKPI LABUG', 'PISA', 'NAUGAT', 'BANGTMU SOREP', 'BUSUNGA HILA', 'KEST', 'POTRUM', 'LENOH']
+Bahagi_WORD = ['LUO', 'SOBRA', 'WANGYAB', 'TINBI', 'HAKMU', 'BIDBID', 'ITNAY', 'MAKYA', 'APA', 'TAAM', 'LONGI',
+                'GIBIB', 'ABAB', 'HUKOB', 'GATEN', 'ABIL', 'GLEE', 'OKKU', 'ADILRI', 'SOLUP', 'BALKATI', 'DOHUT', 'IHTA', 'ADLI', 'OON']
 
-Laro_ANSWER = ['AGAWAN BASE', 'AGAWANG SULOK', 'BAHAY BAHAYAN', 'BAHAY KUBO', 'CHINESE GARTER', 'LANGIT LUPA', 'LUKSONG BAKA', 'LUKSONG TINIK', 'PALOSEBO', 'PATINTERO', 'PIKO',
-                'PITIK BULAG', 'SIPA', 'TAGUAN', 'TUMBANG PRESO', 'UBUSANG LAHI', 'TEKS', 'TRUMPO', 'HOLEN']
+Bahagi_ANSWER = ['ULO', 'BRASO', 'BAYWANG', 'BINTI', 'MUKHA', 'DIBDIB', 'TIYAN', 'KAMAY', 'PAA', 'MATA', 'ILONG',
+                'BIBIG', 'BABA', 'BUHOK', 'TENGA', 'LABI', 'LEEG', 'KUKO', 'DALIRI', 'PULSO', 'BALIKAT', 'TUHOD', 'HITA', 'DILA', 'NOO']
 
-ran_num = randrange(0, (len(Laro_WORD)))
-jumbled_rand_word = Laro_WORD[ran_num]
+ran_num = randrange(0, (len(Bahagi_WORD)))
+jumbled_rand_word = Bahagi_WORD[ran_num]
 
 points = 0
 
@@ -22,20 +22,20 @@ def main():
 
     def change():
         global ran_num
-        ran_num = randrange(0, (len(Laro_WORD)))
-        word.configure(text=Laro_WORD[ran_num])
+        ran_num = randrange(0, (len(Bahagi_WORD)))
+        word.configure(text=Bahagi_WORD[ran_num])
         get_input.delete(0, END)
         ans_lab.configure(text="")
 
     def cheak():
         global points, ran_num
         user_word = get_input.get().upper()
-        if user_word == Laro_ANSWER[ran_num]:
+        if user_word == Bahagi_ANSWER[ran_num]:
             points += 5
             score.configure(text="Score: " + str(points))
             messagebox.showinfo('Correct', "Correct Answer...Keep it Up!")
-            ran_num = randrange(0, (len(Laro_WORD)))
-            word.configure(text=Laro_WORD[ran_num])
+            ran_num = randrange(0, (len(Bahagi_WORD)))
+            word.configure(text=Bahagi_WORD[ran_num])
             get_input.delete(0, END)
             ans_lab.configure(text="")
         else:
@@ -48,14 +48,14 @@ def main():
             points -= 5
             score.configure(text="Score: " + str(points))
             time.sleep(0.5)
-            ans_lab.configure(text=Laro_ANSWER[ran_num])
+            ans_lab.configure(text=Bahagi_ANSWER[ran_num])
         else:
             ans_lab.configure(text='Not enough points')
 
     my_window = Tk()
     my_window.geometry("800x500")
     my_window.resizable(0, 0)
-    my_window.title("Guess the Laro Pinoy Word")
+    my_window.title("Guess the Hayop Pinoy Word")
     my_window.configure(background="#4ce1de")
 
     img1 = PhotoImage(file="button.png")
